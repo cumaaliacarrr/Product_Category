@@ -1,0 +1,344 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{705FBAE6-A5C1-4BCA-978F-4C7AB61B76AC}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Product_Cagetory</RootNamespace>
+    <AssemblyName>Product_Cagetory</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.5\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.0.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.0.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.0.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.0.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.0.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.0.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Diagnostics.Tracing.EventSource, Version=1.1.28.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Diagnostics.Tracing.EventSource.Redist.1.1.28\lib\net40\Microsoft.Diagnostics.Tracing.EventSource.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Migrations, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Migrations.1.0.1.0\lib\net40-Client\Migrations.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Site.css" />
+    <Content Include="Global.asax" />
+    <Content Include="scripts\ai.0.22.9-build00167.js" />
+    <Content Include="scripts\ai.0.22.9-build00167.min.js" />
+    <None Include="scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="scripts\jquery-1.10.2.js" />
+    <Content Include="scripts\jquery-1.10.2.min.js" />
+    <Content Include="scripts\modernizr-2.6.2.js" />
+    <Content Include="Urun_Catalog_theme\css\style.css" />
+    <Content Include="Urun_Catalog_theme\home.html" />
+    <Content Include="Urun_Catalog_theme\img\basket.png" />
+    <Content Include="Urun_Catalog_theme\img\bg.jpg" />
+    <Content Include="Urun_Catalog_theme\img\image.png" />
+    <Content Include="Urun_Catalog_theme\img\new-product.jpg" />
+    <Content Include="Urun_Catalog_theme\js\holder.min.js" />
+    <Content Include="Urun_Catalog_theme\product-details.html" />
+    <Content Include="Urun_Catalog_theme\product-list.html" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\.git\ms-persist.xml" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\packages\Microsoft.ApplicationInsights.2.0.0\lib\dotnet5.4\Microsoft.ApplicationInsights.dll" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\packages\Microsoft.ApplicationInsights.2.0.0\lib\dotnet5.4\Microsoft.ApplicationInsights.XML" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\packages\Microsoft.ApplicationInsights.2.0.0\lib\net40\Microsoft.ApplicationInsights.dll" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\packages\Microsoft.ApplicationInsights.2.0.0\lib\net40\Microsoft.ApplicationInsights.XML" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\packages\Microsoft.ApplicationInsights.2.0.0\lib\net45\Microsoft.ApplicationInsights.dll" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\packages\Microsoft.ApplicationInsights.2.0.0\lib\net45\Microsoft.ApplicationInsights.XML" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\packages\Microsoft.ApplicationInsights.2.0.0\lib\net46\Microsoft.ApplicationInsights.dll" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\packages\Microsoft.ApplicationInsights.2.0.0\lib\net46\Microsoft.ApplicationInsights.XML" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net40\Microsoft.AI.Agent.Intercept.dll" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\packages\Microsoft.ApplicationInsights.DependencyCollector.2.0.0\lib\net40\Microsoft.AI.DependencyCollector.dll" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\packages\Microsoft.ApplicationInsights.DependencyCollector.2.0.0\lib\net40\Microsoft.AI.DependencyCollector.XML" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\packages\Microsoft.ApplicationInsights.DependencyCollector.2.0.0\lib\net45\Microsoft.AI.DependencyCollector.dll" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\packages\Microsoft.ApplicationInsights.DependencyCollector.2.0.0\lib\net45\Microsoft.AI.DependencyCollector.XML" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\packages\Microsoft.ApplicationInsights.JavaScript.0.22.9-build00167\content\scripts\ai.0.22.9-build00167.js" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\packages\Microsoft.ApplicationInsights.JavaScript.0.22.9-build00167\content\scripts\ai.0.22.9-build00167.min.js" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\packages\Microsoft.ApplicationInsights.JavaScript.0.22.9-build00167\tools\prefix.html" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.0.0\lib\net40\Microsoft.AI.PerfCounterCollector.dll" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.0.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\packages\Microsoft.ApplicationInsights.Web.2.0.0\lib\net40\Microsoft.AI.Web.dll" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\packages\Microsoft.ApplicationInsights.Web.2.0.0\lib\net40\Microsoft.AI.Web.XML" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\packages\Microsoft.ApplicationInsights.Web.2.0.0\lib\net45\Microsoft.AI.Web.dll" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\packages\Microsoft.ApplicationInsights.Web.2.0.0\lib\net45\Microsoft.AI.Web.XML" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\packages\Microsoft.ApplicationInsights.WindowsServer.2.0.0\lib\net40\Microsoft.AI.WindowsServer.dll" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\packages\Microsoft.ApplicationInsights.WindowsServer.2.0.0\lib\net40\Microsoft.AI.WindowsServer.XML" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\packages\Microsoft.ApplicationInsights.WindowsServer.2.0.0\lib\net45\Microsoft.AI.WindowsServer.dll" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\packages\Microsoft.ApplicationInsights.WindowsServer.2.0.0\lib\net45\Microsoft.AI.WindowsServer.XML" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.0.0\lib\net40\Microsoft.AI.ServerTelemetryChannel.dll" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.0.0\lib\net40\Microsoft.AI.ServerTelemetryChannel.XML" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.0.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.0.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.XML" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\Home\Details.cshtml" />
+    <Content Include="Views\Home\List.cshtml" />
+    <Content Include="_EventRegisterUsersGuide.docx" />
+    <Content Include="_EventSourceUsersGuide.docx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Entity\Category.cs" />
+    <Compile Include="Entity\DataContext.cs" />
+    <Compile Include="Entity\DataInitializer.cs" />
+    <Compile Include="Entity\Product.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <Content Include="packages.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Urun_Catalog_theme\img\Thumbs.db" />
+    <Content Include="Urun_Catalog_theme\Thumbs.db" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\.gitattributes" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\.gitignore" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\.git\config" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\.git\description" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\.git\HEAD" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\.git\hooks\README.sample" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\.git\index" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\.git\info\exclude" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\.git\logs\HEAD" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\.git\logs\refs\heads\master" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\.git\objects\08\8169ed1a7ee92ff472cfe185a24d579f566f3b" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\.git\objects\0d\76fe4328089e5b63a9c4190badacfc35ef2624" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\.git\objects\1c\9a181a44b4f9a105f0dc71a40ad0284ab6a7c4" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\.git\objects\1d\db020aa79acceed13c8e8b83d310a73d2dc6cc" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\.git\objects\1f\f0c423042b46cb1d617b81efb715defbe8054d" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\.git\objects\28\1c158ad1977e08ae5c05ae7eedc40d7029a443" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\.git\objects\2e\302f9f9548be48e2d23d63555602b2f7362dbb" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\.git\objects\47\e1177ac5b94ae1d980a11ed78409a440026eed" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\.git\objects\6b\1f43dccf2390775edce7346fcb1ebc7887426a" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\.git\objects\7c\4473956eaae7841f360188fb72fa586c06adfa" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\.git\objects\81\8937c1186edff5fb7aa2773b44f0bde8c31963" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\.git\objects\9f\f9ed70e57fc845eaa50ec6fbc3217d2d054af8" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\.git\objects\a2\df11bc3d3cf39a036622de75e053c8984e0202" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\.git\objects\b4\26b548d3cc7dca18a30090118bebc75a742ca1" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\.git\objects\b9\8a3905d3735b76cfd010853a1d91fb2b8708eb" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\.git\objects\bb\1660b6dd9e3bea1a51f5798a360c45f6d113fa" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\.git\objects\bf\d88f3887d87c0574663b05480c66d94f0342d4" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\.git\objects\c3\5844462ba8e330eec0cc96b63d61bd4ed65df4" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\.git\objects\c7\2a5e8b649d2c6352ee6658eb2eb7428224f173" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\.git\objects\da\e155c109ccad35972da0553cfb41ae3b6fd6a2" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\.git\objects\f2\7c75bb3960e88202b6b71b0139ffc2b997a953" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\.git\refs\heads\master" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\.vs\config\applicationhost.config" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\.vs\Urun_Katalog\v14\.suo" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\packages\Microsoft.ApplicationInsights.2.0.0\Microsoft.ApplicationInsights.2.0.0.nupkg" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1.nupkg" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\packages\Microsoft.ApplicationInsights.DependencyCollector.2.0.0\content\ApplicationInsights.config.install.xdt" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\packages\Microsoft.ApplicationInsights.DependencyCollector.2.0.0\content\ApplicationInsights.config.transform" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\packages\Microsoft.ApplicationInsights.DependencyCollector.2.0.0\content\ApplicationInsights.config.uninstall.xdt" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\packages\Microsoft.ApplicationInsights.DependencyCollector.2.0.0\Microsoft.ApplicationInsights.DependencyCollector.2.0.0.nupkg" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\packages\Microsoft.ApplicationInsights.JavaScript.0.22.9-build00167\Microsoft.ApplicationInsights.JavaScript.0.22.9-build00167.nupkg" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.0.0\content\ApplicationInsights.config.install.xdt" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.0.0\content\ApplicationInsights.config.transform" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.0.0\content\ApplicationInsights.config.uninstall.xdt" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.0.0\Microsoft.ApplicationInsights.PerfCounterCollector.2.0.0.nupkg" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\packages\Microsoft.ApplicationInsights.Web.2.0.0\content\net40\ApplicationInsights.config.install.xdt" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\packages\Microsoft.ApplicationInsights.Web.2.0.0\content\net40\ApplicationInsights.config.transform" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\packages\Microsoft.ApplicationInsights.Web.2.0.0\content\net40\ApplicationInsights.config.uninstall.xdt" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\packages\Microsoft.ApplicationInsights.Web.2.0.0\content\net40\web.config.install.xdt" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\packages\Microsoft.ApplicationInsights.Web.2.0.0\content\net40\web.config.uninstall.xdt" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\packages\Microsoft.ApplicationInsights.Web.2.0.0\content\net45\ApplicationInsights.config.install.xdt" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\packages\Microsoft.ApplicationInsights.Web.2.0.0\content\net45\ApplicationInsights.config.transform" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\packages\Microsoft.ApplicationInsights.Web.2.0.0\content\net45\ApplicationInsights.config.uninstall.xdt" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\packages\Microsoft.ApplicationInsights.Web.2.0.0\content\net45\web.config.install.xdt" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\packages\Microsoft.ApplicationInsights.Web.2.0.0\content\net45\web.config.uninstall.xdt" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\packages\Microsoft.ApplicationInsights.Web.2.0.0\Microsoft.ApplicationInsights.Web.2.0.0.nupkg" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\packages\Microsoft.ApplicationInsights.WindowsServer.2.0.0\content\ApplicationInsights.config.install.xdt" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\packages\Microsoft.ApplicationInsights.WindowsServer.2.0.0\content\ApplicationInsights.config.transform" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\packages\Microsoft.ApplicationInsights.WindowsServer.2.0.0\content\ApplicationInsights.config.uninstall.xdt" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\packages\Microsoft.ApplicationInsights.WindowsServer.2.0.0\Microsoft.ApplicationInsights.WindowsServer.2.0.0.nupkg" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\packages\Microsoft.ApplicationInsights.WindowsServer.2.0.0\Tools\install.ps1" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.0.0\content\ApplicationInsights.config.install.xdt" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.0.0\content\ApplicationInsights.config.transform" />
+    <Content Include="Urun_Catalog_theme\Urun_Katalog\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.0.0\content\ApplicationInsights.config.uninstall.xdt" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="scripts\jquery-1.10.2.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+    <Folder Include="Urun_Catalog_theme\Urun_Katalog\.git\objects\info\" />
+    <Folder Include="Urun_Catalog_theme\Urun_Katalog\.git\objects\pack\" />
+    <Folder Include="Urun_Catalog_theme\Urun_Katalog\.git\refs\tags\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>29797</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:29797/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.Diagnostics.Tracing.EventRegister.1.1.28\build\Microsoft.Diagnostics.Tracing.EventRegister.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Diagnostics.Tracing.EventRegister.1.1.28\build\Microsoft.Diagnostics.Tracing.EventRegister.targets'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\Microsoft.Diagnostics.Tracing.EventRegister.1.1.28\build\Microsoft.Diagnostics.Tracing.EventRegister.targets" Condition="Exists('..\packages\Microsoft.Diagnostics.Tracing.EventRegister.1.1.28\build\Microsoft.Diagnostics.Tracing.EventRegister.targets')" />
+  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
